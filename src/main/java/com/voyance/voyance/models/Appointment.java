@@ -6,6 +6,8 @@ import com.voyance.voyance.models.*;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity
@@ -19,12 +21,14 @@ public class Appointment {
 //    private Date date;
 
     @ManyToOne
-    @JoinColumn(name =  "patient_id")
-    private Patient patient;
+    @JoinColumn(name =  "user_id")
+    private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "doctor_id")
-    private Doctor doctor;
+    @Enumerated(EnumType.STRING)
+    private AppointmentStatus appointmentStatus;
+
+    @Column(name = "appointment_time")
+    private Calendar appointmentTime;
 
     @Column(name = "created_at")
     private Timestamp createdAt;

@@ -1,11 +1,10 @@
 package com.voyance.voyance.repositories;
 
-import com.voyance.voyance.models.Patient;
+import com.voyance.voyance.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PatientRepo extends JpaRepository<Patient, Long> {
-    Patient findByEmail(String email);
+public interface UserRepo extends JpaRepository<User, Long> {
     void deleteByEmail(String email);
 }
