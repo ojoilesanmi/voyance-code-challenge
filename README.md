@@ -61,5 +61,10 @@ Appointments can be deleted.
     "appointmentTime": "2021-07-08T18:15:28.309+00:00"
     }
  ```
-   
+  "api/v1/deleteAppointment" This endpoint deletes appointment by taking in id params
+  
+  ```{key = id value = "5"
+  }
+  ```
+  It returns you have successfully deleted this appointment
    
